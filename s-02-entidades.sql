@@ -177,7 +177,7 @@ create table vuelo(
   es_carga                  number(1,0)         not null,
   fecha_estado              date                not null,
   sala_abordar              varchar2(10)            null,
-  fecha_salida              date                not null,
+  fecha_salida              date                not null  default sysdate,
   fecha_aprox_llegada       date                not null,
   aeropuerto_origen_id      number(10,0)        not null,
   aeropuerto_llegada_id     number(10,0)        not null,
@@ -210,7 +210,8 @@ create table empleado_vuelo(
   constraint empleado_vuelo_vuelo_id_fk foreign key(vuelo_id)
     references vuelo(vuelo_id),
   constraint empleado_vuelo_rol_id_fk foreign key(rol_id)
-    references rol(rol_id)
+    references rol(rol_id),
+  constraint empleado_vuelo_puntos_chk check(puntos >=0 and puntos <= 100)
 );
 
 --==============================
@@ -222,7 +223,7 @@ create table datos_vuelo(
   vuelo_id          number(10,0)  not null,
   latitud           number(5,0)   not null,
   longitud          number(5,0)   not null,
-  fecha             date          not null,
+  fecha             date          not null  default sysdate,
   constraint datos_vuelo_pk primary key(num_medicion, vuelo_id),
   constraint datos_vuelo_vuelo_id_fk foreign key(vuelo_id)
     references vuelo(vuelo_id)
