@@ -41,7 +41,7 @@ create table aeropuerto(
   latitud           number(10,0)  not null,
   longitud          number(10,0)  not null,
   activo            number(1,0)   not null,
-  constraint aeropuerto_pk primary key(aeropuerto),
+  constraint aeropuerto_pk primary key(aeropuerto_id),
   constraint aeropuerto_clave_uk unique(clave),
   constraint aeropuerto_tipo_chk check(activo = 1 or activo = 0)
 );
@@ -291,7 +291,7 @@ create table pase_abordar(
   vuelo_pasajero_id     number(10,0)    not null,
   constraint pase_abordar_pk primary key(pase_abordar_id),
   constraint pase_abordar_folio_uk unique(folio),
-  constraint pase_abordar_vuelo_pasajero_id_fk foreign key(vuelo_pasajero_id),
+  constraint pase_abordar_vuelo_pasajero_id_fk foreign key(vuelo_pasajero_id)
     references vuelo_pasajero(vuelo_pasajero_id)
 );
 
