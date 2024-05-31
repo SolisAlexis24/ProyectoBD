@@ -2,7 +2,7 @@
 --@Fecha creación: 01/05/2024
 --@Descripción: Script para crear las tablas del proyecto
 
-connect ash_proy_admin/admin
+connect sc_proy_admin/admin
 
 --==============================
 --Tabla: Pasajero

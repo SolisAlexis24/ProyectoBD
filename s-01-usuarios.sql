@@ -10,7 +10,7 @@ Prompt comenzando creacion de usuarios
 --Limpiando a los usuarios
 declare
 cursor cur_usuarios is
-select username from dba_users where username like 'ASH_PROY%';
+select username from dba_users where username like 'sc_PROY%';
 cursor cur_roles is
 select role from dba_roles where role like 'ROL_%';
 begin
@@ -24,8 +24,8 @@ end;
 /
 
 --Creacion de usuarios
-create user ash_proy_admin identified by admin quota 500m on users;
-create user ash_proy_invitado identified by guest;
+create user sc_proy_admin identified by admin quota 500m on users;
+create user sc_proy_invitado identified by guest;
 
 --Creacion de roles
 create role rol_admin;
@@ -33,7 +33,7 @@ grant create session, create table, create sequence to rol_admin;
 create role rol_invitado;
 grant create session to rol_invitado;
 
-grant rol_admin to ash_proy_admin;
-grant rol_invitado to ash_proy_invitado;
+grant rol_admin to sc_proy_admin;
+grant rol_invitado to sc_proy_invitado;
 
 Prompt Creacion de usuarios finalizada
