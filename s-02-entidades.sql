@@ -182,7 +182,7 @@ create table vuelo(
   aeropuerto_origen_id      number(10,0)        not null,
   aeropuerto_llegada_id     number(10,0)        not null,
   aeronave_id               number(10,0)        not null,
-  estado_id                 number(10,0)        not null,
+  vuelo_estado_id                 number(10,0)        not null,
   constraint vuelo_kp primary key(vuelo_id),
   constraint vuelo_num_vuelo_uk unique(num_vuelo),
   constraint vuelo_aeropuerto_llegada_id_fk foreign key(aeropuerto_llegada_id)
@@ -191,7 +191,7 @@ create table vuelo(
     references aeropuerto(aeropuerto_id),
   constraint vuelo_aeronave_id_fk foreign key(aeronave_id)
     references aeronave(aeronave_id),
-  constraint vuelo_estado_id_fk foreign key(estado_id)
+  constraint vuelo_estado_id_fk foreign key(vuelo_estado_id)
     references vuelo_estado(vuelo_estado_id)
 );
 
@@ -215,14 +215,14 @@ create table empleado_vuelo(
 );
 
 --==============================
---Tabla: Datos del vuelo
+--Tabla: Ubicación del vuelo
 --==============================
 
-create table datos_vuelo(
+create table vuelo_ubicacion(
   num_medicion      number(10,0)  not null,
   vuelo_id          number(10,0)  not null,
-  latitud           number(5,0)   not null,
-  longitud          number(5,0)   not null,
+  latitud           number(7,5)   not null,
+  longitud          number(7,5)   not null,
   fecha             date          not null  default sysdate,
   constraint datos_vuelo_pk primary key(num_medicion, vuelo_id),
   constraint datos_vuelo_vuelo_id_fk foreign key(vuelo_id)
@@ -252,7 +252,7 @@ create table historico_estados_vuelo(
 create table paquete(
   paquete_id        number(10,0)    not null,
   folio             number(18,0)    not null,
-  peso              number(8,2)     not null,
+  peso_kg              number(8,2)     not null,
   tipo_paquete_id   number(10,0)    not null,
   vuelo_id          number(10,0)    not null,
   constraint paquete_pk primary key(paquete_id),
@@ -303,7 +303,7 @@ create table pase_abordar(
 create table maleta(
   num_maleta          number(10,0)    not null,
   pase_abordar_id     number(10,0)    not null,
-  peso                number(7,2)     not null,
+  peso_kg                 number(7,2)     not null,
   constraint maleta_pk primary key(num_maleta, pase_abordar_id),
   constraint maleta_pase_abordar_id_fk foreign key(pase_abordar_id)
     references pase_abordar(pase_abordar_id)
