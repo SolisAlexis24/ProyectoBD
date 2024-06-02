@@ -10,9 +10,9 @@ Prompt comenzando creacion de usuarios
 --Limpiando a los usuarios
 declare
 cursor cur_usuarios is
-select username from dba_users where username like 'sc_PROY%';
+select username from dba_users where username like 'SC_PROY%';
 cursor cur_roles is
-select role from dba_roles where role like 'ROL_%';
+select role from dba_roles where role like 'ROL%';
 begin
 for r in cur_usuarios loop
 execute immediate 'drop user '||r.username||' cascade';
