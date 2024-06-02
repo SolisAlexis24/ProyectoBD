@@ -252,7 +252,7 @@ create table historico_estados_vuelo(
 create table paquete(
   paquete_id        number(10,0)    not null,
   folio             number(18,0)    not null,
-  peso_kg              number(8,2)     not null,
+  peso_kg           number(8,2)     not null,
   tipo_paquete_id   number(10,0)    not null,
   vuelo_id          number(10,0)    not null,
   constraint paquete_pk primary key(paquete_id),
@@ -286,7 +286,8 @@ create table vuelo_pasajero(
 
 create table pase_abordar(
   pase_abordar_id       number(10,0)    not null,
-  folio                 varchar2(8)     not null,
+  folio                 varchar2(8)     generated always as('PA-'
+    ||substr(to_char(pase_abordar_id, 'fm00000000000'), 1, 5)),
   fecha_impresion       date            not null,
   hora_llegada          date            not null,
   vuelo_pasajero_id     number(10,0)    not null,
@@ -303,7 +304,7 @@ create table pase_abordar(
 create table maleta(
   num_maleta          number(10,0)    not null,
   pase_abordar_id     number(10,0)    not null,
-  peso_kg                 number(7,2)     not null,
+  peso_kg             number(7,2)     not null,
   constraint maleta_pk primary key(num_maleta, pase_abordar_id),
   constraint maleta_pase_abordar_id_fk foreign key(pase_abordar_id)
     references pase_abordar(pase_abordar_id)
