@@ -74,11 +74,12 @@ create table rol(
 --==============================
 
 create table puesto(
-  puesto_id       number(10,0),
-  clave           varchar2(20)  not null,
-  nombre          varchar2(30)  not null,
-  descripcion     varchar2(40)  not null,
-  sueldo_mensual  number(8,2)   not null,
+  puesto_id         number(10,0),
+  clave             varchar2(20)  not null,
+  nombre            varchar2(30)  not null,
+  descripcion       varchar2(40)  not null,
+  sueldo_mensual    number(8,2)   not null,
+  sueldo_quincenal  number(8,2)  as(sueldo_mensual/2),
   constraint puesto_puesto_pk primary key(puesto_id),
   constraint puesto_clave_uk unique(clave)
 );
@@ -92,7 +93,7 @@ create table empleado(
   apellidos         varchar2(40) not null,
   rfc               varchar2(13) not null,
   curp              varchar2(18) not null,
-  foto              BLOB         not null,
+  foto              BLOB         null,
   puesto_id                      not null,
   jefe_id                            null,
   constraint empleado_empleado_pk primary key(empleado_id),
@@ -159,6 +160,8 @@ create table aeronave_carga(
   bodegas_ancho               number(10,0) not null,
   bodegas_profundidad         number(10,0) not null,
   aeropuerto_resguardo_id     number(10,0) not null,
+  volumen_bodegas             varchar2(100) as('Volumen: ' 
+  ||bodegas_alto*bodegas_ancho*bodegas_profundidad || ' Lts.'),
   constraint aeronave_carga_pk primary key(aeronave_id),
   constraint aeronave_carga_aeronave_id_fk foreign key(aeronave_id)
     references aeronave(aeronave_id),
@@ -177,12 +180,18 @@ create table vuelo(
   es_carga                  number(1,0)         not null,
   fecha_estado              date                not null,
   sala_abordar              varchar2(10)            null,
-  fecha_salida              date                not null  default sysdate,
+  fecha_salida              date                default sysdate,
   fecha_aprox_llegada       date                not null,
   aeropuerto_origen_id      number(10,0)        not null,
   aeropuerto_llegada_id     number(10,0)        not null,
   aeronave_id               number(10,0)        not null,
-  vuelo_estado_id                 number(10,0)        not null,
+  vuelo_estado_id           number(10,0)        not null,
+  folio                     varchar2(19)          as(
+    'V-'
+    || to_char(num_vuelo, 'fm00000')
+    || '-'
+    || to_char(fecha_salida, 'dd-mm-yyyy')
+  ) virtual,
   constraint vuelo_kp primary key(vuelo_id),
   constraint vuelo_num_vuelo_uk unique(num_vuelo),
   constraint vuelo_aeropuerto_llegada_id_fk foreign key(aeropuerto_llegada_id)
@@ -223,7 +232,7 @@ create table vuelo_ubicacion(
   vuelo_id          number(10,0)  not null,
   latitud           number(7,5)   not null,
   longitud          number(7,5)   not null,
-  fecha             date          not null  default sysdate,
+  fecha             date          default sysdate,
   constraint datos_vuelo_pk primary key(num_medicion, vuelo_id),
   constraint datos_vuelo_vuelo_id_fk foreign key(vuelo_id)
     references vuelo(vuelo_id)
@@ -286,9 +295,8 @@ create table vuelo_pasajero(
 
 create table pase_abordar(
   pase_abordar_id       number(10,0)    not null,
-  folio                 varchar2(8)     generated always as('PA-'
-    ||substr(to_char(pase_abordar_id, 'fm00000000000'), 1, 5)),
-  fecha_impresion       date            not null,
+  folio                 varchar2(8)     not null,
+  fecha_impresion       date            default sysdate,
   hora_llegada          date            not null,
   vuelo_pasajero_id     number(10,0)    not null,
   constraint pase_abordar_pk primary key(pase_abordar_id),
@@ -298,7 +306,7 @@ create table pase_abordar(
 );
 
 --==============================
---Tabla: Maketa
+--Tabla: Maleta
 --==============================
 
 create table maleta(
@@ -309,3 +317,5 @@ create table maleta(
   constraint maleta_pase_abordar_id_fk foreign key(pase_abordar_id)
     references pase_abordar(pase_abordar_id)
 );
+
+disconnect
