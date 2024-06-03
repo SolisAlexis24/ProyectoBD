@@ -31,7 +31,7 @@ create user sc_proy_invitado identified by guest;
 create role rol_admin;
 grant create session, create table, create sequence, create public synonym to rol_admin;
 create role rol_invitado;
-grant create session to rol_invitado;
+grant create session, create synonym to rol_invitado;
 
 grant rol_admin to sc_proy_admin;
 grant rol_invitado to sc_proy_invitado;
