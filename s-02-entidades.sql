@@ -317,5 +317,3 @@ create table maleta(
   constraint maleta_pase_abordar_id_fk foreign key(pase_abordar_id)
     references pase_abordar(pase_abordar_id)
 );
-
-disconnect

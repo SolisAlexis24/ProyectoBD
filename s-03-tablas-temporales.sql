@@ -28,7 +28,3 @@ create global temporary table empleado_jefe_temp
   from empleado e
   left join empleado j 
   on e.jefe_id = j.empleado_id;
-
-
-
-disconnect
