@@ -1,4 +1,4 @@
---@Autor(es): 
+--@Autor(es): Jair C., Alexis S.
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear tablas temporales
 

@@ -1,4 +1,4 @@
---@Autor(es): Solis Hernández Ian Alexis
+--@Autor(es): Alexis S., Jair C.
 --@Fecha creación: 01/05/2024
 --@Descripción: Script para crear las tablas del proyecto
 

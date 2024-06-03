@@ -1,4 +1,4 @@
---@Autor(es): 
+--@Autor(es): Alexis S. Jair C.
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear secuencias
 
