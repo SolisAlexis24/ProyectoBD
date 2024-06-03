@@ -128,7 +128,7 @@ create table aeronave(
   es_comercial            number(1,0)     not null,
   matricula               varchar2(10)    not null,
   modelo                  varchar2(50)    not null,
-  especificaciones_pdf    varchar2(50)    not null,
+  especificaciones_pdf    BLOB                null,
   constraint aeronave_pk primary key(aeronave_id),
   constraint aeronave_matricula_uk unique(matricula),
   constraint aeronave_tipo_chk check(es_carga = 1 or es_comercial = 1)
