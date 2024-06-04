@@ -24,7 +24,7 @@ create table pasajero(
 --==============================
 create table tipo_paquete(
   tipo_paquete_id          number(10,0),
-  clave                    varchar2(15)    not null,
+  clave                    varchar2(15)    as('PAK-' || to_char(tipo_paquete_id, 'fm0000000000')),
   descripcion              varchar2(100)   not null,
   instrucciones            varchar2(200)   not null,
   constraint tipo_paquete_pk primary key(tipo_paquete_id),
@@ -36,7 +36,7 @@ create table tipo_paquete(
 --==============================
 create table aeropuerto(
   aeropuerto_id     number(10,0),
-  clave             varchar2(13)  not null,
+  clave             varchar2(13)  as('A-'|| to_char(aeropuerto_id, 'fm0000000000')),
   nombre            varchar2(40)  not null,
   latitud           number(7,5)  not null,
   longitud          number(7,5)  not null,
@@ -75,7 +75,7 @@ create table rol(
 
 create table puesto(
   puesto_id         number(10,0),
-  clave             varchar2(20)  not null,
+  clave             varchar2(20)  as(substr(nombre, 1, 1) || '-' || to_char(puesto_id, 'fm0000000000')),
   nombre            varchar2(30)  not null,
   descripcion       varchar2(40)  not null,
   sueldo_mensual    number(8,2)   not null,
