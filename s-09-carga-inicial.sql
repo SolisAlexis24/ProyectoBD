@@ -8,19 +8,19 @@ set serveroutput on
 
 --Estados del vuelo
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(1, 'LISTO', 'El vuelo esta listo para despegar', 1);
+  values(1, 'EN ESPERA', 'El vuelo está esperando autorización', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(2, 'EN CURSO', 'El vuelo se encuentra en curso', 1);
+  values(2, 'LISTO', 'El vuelo esta listo para despegar', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(3, 'COMPLETADO', 'El vuelo ha terminado su viaje', 1);  
+  values(3, 'EN CURSO', 'El vuelo se encuentra en curso', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(4, 'RETRASADO', 'El vuelo aun no puede despegar', 1);
+  values(4, 'COMPLETADO', 'El vuelo ha terminado su viaje', 1);  
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(5, 'CANCELADO', 'El vuelo ha sido cancelado', 1);
+  values(5, 'RETRASADO', 'El vuelo aun no puede despegar', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(6, 'DESVIADO', 'El vuelo ha sido desviado a otro aeropuerto', 1);
+  values(6, 'CANCELADO', 'El vuelo ha sido cancelado', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(7, 'EN ESPERA', 'El vuelo está esperando autorización', 1);
+  values(7, 'DESVIADO', 'El vuelo ha sido desviado a otro aeropuerto', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
   values(8, 'APLAZADO', 'El vuelo ha sido aplazado', 1); 
 
