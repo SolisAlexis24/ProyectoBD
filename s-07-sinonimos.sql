@@ -43,10 +43,9 @@ declare
   select table_name from user_tables;
 begin
   for i in cur_tablas loop
-    execute immediate 'create or replace synonym '|| v_prefijo || i.table_name || ' for ' || i.table_name;
+    execute immediate 'create or replace public synonym '|| v_prefijo || i.table_name || ' for ' || i.table_name;
   end loop;
 end;
 /
-
 
 
