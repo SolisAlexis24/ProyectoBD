@@ -4,17 +4,11 @@
 
 --índices non unique
 create index vuelo_aeronave_id_ix on vuelo(aeronave_id);
-create index aeronave_comercial_aeronave_id_ix on aeronave_comercial(aeronave_id);
-create index aeronave_carga_aeronave_id_ix on aeronave_carga(aeronave_id);
 create index aeronave_carga_aeropuerto_resguardo_id_ix on aeronave_carga(aerpuerto_resguardo_id);
 create index empleado_jefe_id_ix on empleado(jefe_id);
 
 --Índices unique
-create unique index puesto_clave_puesto_iuk on puesto(clave);
-create unique index vuelo_estado_clave_iuk on vuelo_estado(clave);
-create unique index tipo_paquete_clave_iuk on tipo_paquete(clave);
 create unique index rol_nombre_iuk on rol(nombre);
-create unique index aeropuerto_clave_iuk on aeropuerto(clave);
 create unique index pag_web_emp_direccion_iuk on pag_web_emp(direccion);
 
 --Índices compuestos unique
