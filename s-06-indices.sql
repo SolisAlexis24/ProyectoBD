@@ -4,7 +4,7 @@
 
 --índices non unique
 create index vuelo_aeronave_id_ix on vuelo(aeronave_id);
-create index aeronave_carga_aeropuerto_resguardo_id_ix on aeronave_carga(aerpuerto_resguardo_id);
+create index aeronave_carga_aeropuerto_resguardo_id_ix on aeronave_carga(aeropuerto_resguardo_id);
 create index empleado_jefe_id_ix on empleado(jefe_id);
 
 --Índices unique
