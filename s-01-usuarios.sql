@@ -29,7 +29,7 @@ create user sc_proy_invitado identified by guest;
 
 --Creacion de roles
 create role rol_admin;
-grant create session, create table, create sequence, create public synonym, create procedure to rol_admin;
+grant create session, create table, create sequence, create public synonym, create procedure, create trigger to rol_admin;
 create role rol_invitado;
 grant create session, create synonym to rol_invitado;
 
