@@ -4,6 +4,8 @@
 
 @s-05-secuencias.sql
 
+@s-07-sinonimos.sql
 
+@s-09-carga-inicial.sql
 
 disconnect
