@@ -12,8 +12,6 @@
 @s-12-tr-valida_num_web-prueba.sql
 @s-11-tr-valida_estado_vuelo.sql
 @s-12-tr-valida_estado_vuelo-prueba.sql
-@s-13-p-pase-abordar.sql
-@s-14-p-pase-abordar-prueba.sql
 @s-13-p-registra_maletas.sql
 @s-14-p-registra_maletas-prueba.sql
 @s-13-p-registrar_tripulacion.sql
@@ -24,5 +22,5 @@
 @s-16-fx-num-asientos-prueba.sql
 @s-15-fx-total-sueldo.sql
 @s-16-fx-total-sueldo-prueba.sql
-
+@resultados-proyecto-final.sql
 disconnect
