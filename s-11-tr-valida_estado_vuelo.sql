@@ -3,6 +3,8 @@
 --@Descripción: Script para crear trigger que sirve para verificar que el estado de vuelo no sea completado a 
 --menos que su ubicacion sea la del aeropuerto de destino
 
+Prompt ==============================TRIGGER 2==============================
+
 create or replace trigger tr_valida_estado_vuelo
   before insert or update of vuelo_estado_id on vuelo
   for each row

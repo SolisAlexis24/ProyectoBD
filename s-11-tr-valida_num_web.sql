@@ -2,6 +2,8 @@
 --@Fecha creación: 01/05/2024
 --@Descripción: Script para crear trigger que sirve para verificar el numero de paginas web del empleado
 
+Prompt ==============================TRIGGER 1==============================
+
 create or replace trigger tr_valida_num_web
   before insert on pag_web_emp
   for each row

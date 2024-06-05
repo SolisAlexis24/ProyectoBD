@@ -2,6 +2,8 @@
 --@Fecha creación: 01/05/2024
 --@Descripción: Script para crear probar el trigger tr_valida_estado_vuelo
 
+Prompt ==============================PRUEBAS TRIGGER 2==============================
+
 Prompt =======================================
 Prompt Prueba 1.
 prompt Insertando un vuelo con un estado válido
