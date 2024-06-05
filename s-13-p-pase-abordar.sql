@@ -66,12 +66,13 @@ begin
       values(v_vuelo_pasajero_id, v_num_asiento, p_atencion_especial, p_pasajero_id, v_vuelo_id);
 
     insert into pase_abordar (pase_abordar_id, folio, fecha_impresion, hora_llegada, vuelo_pasajero_id)
-  	  values(v_pase_abordar_id, v_folio, v_fecha_impresion, v_fecha_llegada, v_vuelo_pasajero_id);
+      values(v_pase_abordar_id, v_folio, v_fecha_impresion, v_fecha_llegada, v_vuelo_pasajero_id);
     
     dbms_output.put_line('Se ha registrado su pase de abordar con éxito');
-  else
-    dbms_output.put_line('No se encontraron vuelos próximos');
   end if;
+  exception
+    when no_data_found then 
+    dbms_output.put_line('No se encontraron vuelos próximos');
 end;
 /
 show errors
