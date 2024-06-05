@@ -58,3 +58,7 @@ exception
   dbms_output.put_line('Error: excepcion inesperada');
 end;
 /
+
+
+Prompt Prueba concluida, Haciendo Rollback para limpiar la BD.
+rollback;
