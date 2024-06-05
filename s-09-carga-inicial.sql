@@ -8,9 +8,9 @@ set serveroutput on
 
 --Estados del vuelo
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(1, 'EN ESPERA', 'El vuelo está esperando autorización', 1);
+  values(1, 'PROGRAMADO', 'El vuelo está esperando autorización', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
-  values(2, 'LISTO', 'El vuelo esta listo para despegar', 1);
+  values(2, 'ABORDANDO', 'El vuelo esta listo para despegar', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
   values(3, 'EN CURSO', 'El vuelo se encuentra en curso', 1);
 insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
@@ -26,9 +26,9 @@ insert into vuelo_estado(vuelo_estado_id, clave, descripcion, activo)
 
 
 declare
-  v_empleado_id number := empleado_seq.nextval;--
-  v_rol_id number := rol_seq.nextval;--
-  v_puesto_id number := puesto_seq.nextval;--
+  v_empleado_id number := empleado_seq.nextval;
+  v_rol_id number := rol_seq.nextval;
+  v_puesto_id number := puesto_seq.nextval;
   v_pasajero_id number := pasajero_seq.nextval;
   v_vuelo_pasajero_id number := vuelo_pasajero_seq.nextval;
   v_pase_abordar_id number := pase_abordar_seq.nextval;
@@ -36,8 +36,8 @@ declare
   v_paquete_id number := paquete_seq.nextval;
   v_vuelo_id number := vuelo_seq.nextval;
   v_aeronave_id number := aeronave_seq.nextval;
-  v_aeropuerto1_id number := aeropuerto_seq.nextval;--
-  v_aeropuerto2_id number := aeropuerto_seq.nextval;--
+  v_aeropuerto1_id number := aeropuerto_seq.nextval;
+  v_aeropuerto2_id number := aeropuerto_seq.nextval;
 begin
   insert into puesto(puesto_id, nombre, descripcion, sueldo_mensual) 
     values(v_puesto_id, 'Piloto senior', 'Piloto con 10 años de experiencia', 150000.00);
