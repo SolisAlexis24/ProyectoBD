@@ -9,8 +9,10 @@
 @s-09-carga-inicial.sql
 @s-10-consultas.sql
 @s-11-tr-valida_num_web.sql
-@s-11-tr-valida_num_web-prueba.sql
+@s-12-tr-valida_num_web-prueba.sql
 @s-11-tr-valida_estado_vuelo.sql
-@s-11-tr-valida_estado_vuelo-prueba.sql
+@s-12-tr-valida_estado_vuelo-prueba.sql
+
+
 
 disconnect
