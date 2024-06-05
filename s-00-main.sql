@@ -9,5 +9,6 @@
 @s-09-carga-inicial.sql
 
 @s-11-tr-valida_num_web.sql
+@s-11-tr-valida_num_web-prueba.sql
 
 disconnect
