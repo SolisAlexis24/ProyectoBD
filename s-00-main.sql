@@ -18,5 +18,6 @@
 @s-14-p-registra_maletas-prueba.sql
 @s-13-p-registrar_tripulacion.sql
 @s-14-p-registrar_tripulacion-prueba.sql
-
+@s-15-fx-calcula_paquetes.sql
+@s-16-fx-calcula_paquetes_prueba.sql
 disconnect
