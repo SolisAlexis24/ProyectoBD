@@ -17,3 +17,5 @@ begin
   end if;
 end;
 /
+Prompt Prueba concluida, Haciendo Rollback para limpiar la BD.
+rollback;
