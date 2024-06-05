@@ -2,6 +2,8 @@
 --@Fecha creación: 01/05/2024
 --@Descripción: Script para cargar los datos iniciales
 
+Prompt ==============================CARGA INICIAL==============================
+
 connect sc_proy_admin/admin
 set serveroutput on
 

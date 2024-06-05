@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear índices del proyecto
 
+Prompt ==============================INDICES==============================
+
 --índices non unique
 create index vuelo_aeronave_id_ix on vuelo(aeronave_id);
 create index aeronave_carga_aeropuerto_resguardo_id_ix on aeronave_carga(aeropuerto_resguardo_id);

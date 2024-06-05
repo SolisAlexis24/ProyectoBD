@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear secuencias
 
+Prompt ==============================SECUENCIAS==============================
+
 connect sc_proy_admin/admin
 
 --Secuencia para empleados

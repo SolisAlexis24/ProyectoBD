@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear vistas del proyecto
 
+Prompt ==============================VISTAS==============================
+
 create or replace view v_vuelos_comerciales_hoy(num_vuelo, sala_abordar, fecha_salida, fecha_aprox_llegada, num_pasajeros) 
 as select r.num_vuelo, r.sala_abordar, r.fecha_salida, r.fecha_aprox_llegada, q.num_pasajeros
 from (select v.vuelo_id, count(*) num_pasajeros from vuelo v, vuelo_pasajero vp where v.vuelo_id=vp.vuelo_id group by v.vuelo_id) q,

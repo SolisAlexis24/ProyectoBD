@@ -2,6 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear sinonimos
 
+Prompt ==============================SINONIMOS==============================
 
 connect sc_proy_admin/admin
 

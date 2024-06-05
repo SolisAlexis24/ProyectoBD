@@ -5,6 +5,7 @@
 --Concexión como sys
 connect sys/system as sysdba
 
+Prompt ==============================USUARIOS==============================
 
 Prompt comenzando creacion de usuarios
 --Limpiando a los usuarios

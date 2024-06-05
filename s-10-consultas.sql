@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para consultas del proyecto
 
+Prompt ==============================CONSULTAS==============================
+
 --Consulta vuelos cancelados el dia de hoy
 select * from v_vuelos_cancelados
 where to_char(fecha_salida,'dd/mm/yyyy')=to_char(sysdate,'dd/mm/yyyy');

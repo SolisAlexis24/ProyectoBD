@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear tabla externa del proyecto
 
+Prompt ==============================TABLAS EXTERNAS==============================
+
 connect sys/system as sysdba
 /
 
