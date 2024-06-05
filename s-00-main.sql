@@ -15,5 +15,5 @@
 
 
 @s-15-fx-sp_registra_maletas.sql
-
+@s-16-fx-sp_registra_maletas-prueba.sql
 disconnect
