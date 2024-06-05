@@ -2,7 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script prueba funcion número asientos del proyecto
 
-Prompt =======================Prueba 1==========================
+Prompt =======================PRUEBA 1 FUNCIÓN 1==========================
 
 set serveroutput on
 
