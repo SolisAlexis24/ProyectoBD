@@ -2,7 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script prueba funcion sueldo por departamento del proyecto
 
-Prompt =======================Prueba 1==========================
+Prompt =======================PRUEBA 1 FUNCIÓN 2==========================
 
 set serveroutput on
 
