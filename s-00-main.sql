@@ -16,4 +16,7 @@
 
 @s-15-fx-sp_registra_maletas.sql
 @s-16-fx-sp_registra_maletas-prueba.sql
+@s-15-fx-sp_registrar_tripulacion.sql
+@s-16-fx-sp_registrar_tripulacion-prueba.sql
+
 disconnect
