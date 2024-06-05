@@ -5,10 +5,12 @@
 @s-05-secuencias.sql
 @s-06-indices.sql
 @s-07-sinonimos.sql
-
+@s-08-vistas.sql
 @s-09-carga-inicial.sql
-
+@s-10-consultas.sql
 @s-11-tr-valida_num_web.sql
 @s-11-tr-valida_num_web-prueba.sql
+@s-11-tr-valida_estado_vuelo.sql
+@s-11-tr-valida_estado_vuelo-prueba.sql
 
 disconnect
