@@ -2,7 +2,7 @@
 --@Fecha creación: 04/05/2024
 --@Descripción: Script para crear funcion que sirve para registrar a la tripulacion
 
-Prompt ==============================FUNCION 2==============================
+Prompt ==============================PROCEDIMIENTO 3==============================
 
 
 create or replace procedure sp_registrar_tripulacion(

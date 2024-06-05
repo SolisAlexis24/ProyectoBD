@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para procedimiento pase de abordar del proyecto
 
+Prompt ==============================PROCEDIMIENTO 1==============================
+
 create or replace procedure pc_pase_abordar(
   p_pasajero_id in number,
   p_fecha_salida in date,

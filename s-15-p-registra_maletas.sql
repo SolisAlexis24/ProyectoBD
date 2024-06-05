@@ -2,7 +2,7 @@
 --@Fecha creación: 04/05/2024
 --@Descripción: Script para crear funcion que sirve para insertar maletas de un pasajero
 
-Prompt ==============================FUNCION 1==============================
+Prompt ==============================PROCEDIMIENTO 2=============================
 
 create or replace procedure sp_registra_maletas(
     p_pase_abordar_id in number, p_peso_kg in number) as

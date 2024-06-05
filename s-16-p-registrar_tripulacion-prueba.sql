@@ -2,7 +2,7 @@
 --@Fecha creación: 05/06/2024
 --@Descripción: Script para crear probar la funcion
 
-Prompt ==============================PRUEBA FUNCION 2==============================
+Prompt ==============================PRUEBA PROCEDIMIENTO 3==============================
 
 Prompt =======================================
 Prompt Prueba 1.

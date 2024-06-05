@@ -3,7 +3,7 @@
 --@Descripción: Script para probar la funcion registra_maletas
 
 
-Prompt ==============================PRUEBA FUNCION 1==============================
+Prompt ==============================PRUEBA PROCEDIMIENTO 2==============================
 
 Prompt =======================================
 Prompt Prueba 1.
