@@ -12,11 +12,11 @@
 @s-12-tr-valida_num_web-prueba.sql
 @s-11-tr-valida_estado_vuelo.sql
 @s-12-tr-valida_estado_vuelo-prueba.sql
+@s-13-p-pase-abordar.sql
 
-
-@s-15-fx-sp_registra_maletas.sql
-@s-16-fx-sp_registra_maletas-prueba.sql
-@s-15-fx-sp_registrar_tripulacion.sql
-@s-16-fx-sp_registrar_tripulacion-prueba.sql
+@s-13-p-registra_maletas.sql
+@s-14-p-registra_maletas-prueba.sql
+@s-13-p-registrar_tripulacion.sql
+@s-14-p-registrar_tripulacion-prueba.sql
 
 disconnect
