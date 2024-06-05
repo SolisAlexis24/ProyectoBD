@@ -13,3 +13,5 @@ begin
     dbms_output.put_line('No se encontraron vuelos próximos');
 end;
 /
+Prompt Prueba concluida, Haciendo Rollback para limpiar la BD.
+rollback;
