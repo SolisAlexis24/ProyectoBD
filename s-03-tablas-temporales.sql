@@ -2,7 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para crear tablas temporales
 
-Prompt ==============================RABLAS TEMPORALES==============================
+Prompt ==============================TABLAS TEMPORALES==============================
 
 connect sc_proy_admin/admin
 
@@ -10,7 +10,7 @@ connect sc_proy_admin/admin
 --Se desea crear una tabla que contenga el numero de aeronaves de carga
 --agrupado por el aeropuerto donde se resguardan 
 
-create global temporary table carga_aeropueros_temp
+create global temporary table carga_aeropuertos_temp
   on commit preserve rows as
   select aeropuerto_id, nombre, count(*) num_aeronaves
   from aeronave_carga c
