@@ -2,6 +2,8 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para funcion sueldo por departamento del proyecto
 
+Prompt ==============================FUNCIÓN 2==============================
+
 create or replace function sueldo_total(
   v_nombre_puesto varchar2
 ) return number is
