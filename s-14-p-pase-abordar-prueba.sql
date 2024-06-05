@@ -2,7 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para probar procedimiento pase de abordar del proyecto
 
-Prompt =======================Prueba 1: Vuelo no encontrado==========================
+Prompt =======================PRUEBA 1 PROCEDIMIENTO 1: Vuelo no encontrado==========================
 
 set serveroutput on
 
