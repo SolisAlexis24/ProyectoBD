@@ -1,0 +1,3 @@
+--@Autor(es): Alexis S., Jair C.
+--@Fecha creación: 04/05/2024
+--@Descripción: Script para probar la funcion registra_maletas

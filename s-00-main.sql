@@ -14,5 +14,6 @@
 @s-12-tr-valida_estado_vuelo-prueba.sql
 
 
+@s-15-fx-sp_registra_maletas.sql
 
 disconnect
