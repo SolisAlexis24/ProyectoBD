@@ -2,7 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para funcion sueldo por departamento del proyecto
 
-Prompt ==============================FUNCIÓN 2==============================
+Prompt ==============================FUNCIÓN 3==============================
 
 create or replace function sueldo_total(
   v_nombre_puesto varchar2
@@ -19,6 +19,9 @@ create or replace function sueldo_total(
     
     v_total_sueldo:=v_num_emp*v_sueldo_puesto;
     return v_total_sueldo;
+  exception
+  when no_data_found then
+    return null;
   end;
 /
 show errors

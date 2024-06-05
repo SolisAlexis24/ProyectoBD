@@ -2,7 +2,7 @@
 --@Fecha creación: 02/06/2024
 --@Descripción: Script para funcion sueldo por departamento del proyecto
 
-Prompt ==============================FUNCIÓN 1==============================
+Prompt ==============================FUNCIÓN 2==============================
 
 create or replace function num_asientos(
   v_vuelo_id number

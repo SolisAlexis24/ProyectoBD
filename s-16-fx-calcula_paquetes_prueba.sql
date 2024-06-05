@@ -2,6 +2,8 @@
 --@Fecha creación: 05/06/2024
 --@Descripción: Script para validar funcionamiento de funcion fx_calcula_precio_paquetes
 
+Prompt =======================PRUEBA FUNCIÓN 1==========================
+
 Prompt =======================================
 Prompt Prueba 1.
 prompt Calculando el precio de los pquetes de un viaje
