@@ -86,6 +86,7 @@ def mostrar_vista_consulta():
     boton_regresar.pack(side="top", anchor="nw", padx=10, pady=10)
 
     def imprimir_maletas(connection, pase_id, etiqueta):
+        etiqueta.config(text="")
         resultado = conseguir_maletas(connection, pase_id)
         for i in resultado:
             etiqueta.config(text=etiqueta.cget("text") + str(i[0]) +"\t\t"+ str(i[2]) +  "\n")

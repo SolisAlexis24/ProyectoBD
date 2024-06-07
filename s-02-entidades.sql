@@ -38,7 +38,7 @@ create table tipo_paquete(
 create table aeropuerto(
   aeropuerto_id     number(10,0),
   clave             varchar2(13)  as('A-'|| to_char(aeropuerto_id, 'fm0000000000')),
-  nombre            varchar2(40)  not null,
+  nombre            varchar2(100)  not null,
   latitud           number(7,5)  not null,
   longitud          number(7,5)  not null,
   activo            number(1,0)   not null,

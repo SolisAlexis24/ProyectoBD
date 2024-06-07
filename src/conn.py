@@ -22,5 +22,3 @@ def conseguir_maletas(connection, pase_id):
     instruction = "select * from maleta where pase_abordar_id = " + pase_id
     cur.execute(instruction)
     return cur.fetchall()
-
-conectar()
